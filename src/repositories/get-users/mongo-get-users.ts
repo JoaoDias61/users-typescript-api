@@ -10,7 +10,6 @@ export class MongoGetUsersRepository implements IGetUsersRepository {
             .toArray();
         return users.map(({ _id, ...rest }) => ({ ...rest, id: _id.toHexString() }));
 
-
     }
 
 }
